@@ -11,9 +11,9 @@ const students = [
 // 1. getTopScoringStudents
 // Приймає масив студентів та повертає масив імен студентів, які мають оцінку більше 80
 function getTopScoringStudents(students) {
-  const filteredPeople = people.filter(person => person.score > 80);
-
-  return filteredPeople;
+  return students
+    .filter(student => student.score > 80) 
+    .map(student => student.name);  
 }
 
 // 2. getAverageAge
@@ -35,12 +35,14 @@ function addStudent(students, student) {
   students.push(newStudent);
   return students;
 }
-console.log(addStudent(students, { name: "Jake", age: 24, score: 88 }))
+console.log(addStudent);
 
 // 4. removeStudentByName
 // Приймає масив студентів та ім'я студента, якого потрібно видалити, і повертає новий масив без цього студента
 function removeStudentByName(students, name) {
-  // Ваш код тут
+  return students.filter(student => student.name !==name);
 }
+console.log(removeStudentByName);
+
 
 module.exports = { getTopScoringStudents, getAverageAge, addStudent, removeStudentByName };
