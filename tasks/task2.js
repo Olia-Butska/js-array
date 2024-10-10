@@ -32,7 +32,7 @@ function getAverageAge(students) {
 // Приймає масив студентів та новий об'єкт студента і додає його до масиву
 function addStudent(students, student) {
   const newStudent = { name: "Jake", age: 24, score: 88 };
-  students.push(newStudent);
+  students.push(student);
   return students;
 }
 console.log(addStudent);
